@@ -8,8 +8,8 @@ Topic: LinkedList
 Approach: 
 
 Required Time: 
-Complexity Time: 
-Complexity Space: 
+Complexity Time: O(n)
+Complexity Space: O(1)
 
 Assumpitions: 
 
@@ -24,7 +24,7 @@ struct Node{
     Node* next;
 };
 
-Node* mergeTwoLists( Node* List1, Node* List2 ){
+Node* mergeTwoLists_V1( Node* List1, Node* List2 ){
 
     if (!List1) return List2;
     if (!List2) return List1;
@@ -59,6 +59,63 @@ Node* mergeTwoLists( Node* List1, Node* List2 ){
     }
 
     return head;
+
+}
+
+Node* mergeTwoLists_V2( Node* List1, Node* List2 ){
+    
+    if(!List1) return List2;
+    if(!List2) return List1;
+
+    Node* head;
+    Node* current;
+
+    if( List1->data <= List2->data ){
+        head = List1;
+        List1 = List1->next;
+    }else{
+        head = List2;
+        List2 = List2->next;
+    }
+
+    current = head;
+
+    while( List1 && List2 ){
+        
+        if( List1->data <= List2->data){
+            current->next = List1;
+            List1 = List1->next; 
+        }else{
+            current->next = List2;
+            List2 = List2->next; 
+        }
+
+        current = current->next;
+    }
+
+    if(!List1){
+        current->next = List2;
+    }
+    if(!List2){
+        current->next = List1;
+    }
+
+    return head;
+}
+
+Node* mergeTwoListsRecursion( Node* List1, Node* List2 ){
+
+    if (!List1) return List2;
+
+    if (!List2) return List1;
+
+    if( List1->data <= List2->data){
+        List1->next = mergeTwoListsRecursion( List1->next, List2);
+        return List1;
+    }else{
+        List2->next = mergeTwoListsRecursion( List1, List2->next);
+        return List2;
+    }
 
 }
 
@@ -100,13 +157,36 @@ int main(){
         { { }, {0}}
     };
 
+    cout<<"V1"<<"\n";
+
     for( auto test : testCases){
         Node* list1 = createList( test.first ); 
         Node* list2 = createList( test.second ); 
 
-        list1 = mergeTwoLists(list1, list2);
+        list1 = mergeTwoLists_V1(list1, list2);
+        print(list1);
 
-        print(list1); 
+    }
+
+    cout<<"V2"<<"\n";
+
+    for( auto test : testCases){
+        Node* list1 = createList( test.first ); 
+        Node* list2 = createList( test.second ); 
+
+        list1 = mergeTwoLists_V2(list1, list2);
+        print(list1);
+
+    }
+
+    cout<<"Recursion"<<"\n";
+
+    for( auto test : testCases){
+        Node* list1 = createList( test.first ); 
+        Node* list2 = createList( test.second ); 
+
+        list1 = mergeTwoListsRecursion(list1, list2);
+        print(list1);
 
     }
 
