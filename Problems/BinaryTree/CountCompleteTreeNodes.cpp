@@ -1,11 +1,10 @@
 /*
-
 Site: LeetCode
-Topic: Binary Tree Recursion
+Topic: Binary Tree 
 
 222. Count Complete Tree Nodes
 
-Approach: 
+Approach: Recursion
 
 Required Time: 
 Complexity Time: 
