@@ -11,8 +11,7 @@ in the tree.
 Approach: Recursion - DFS Pre-Order
 
 A recursive DFS approach is implemented in pre-order.
-The countNodes function calculates the total number of nodes in a binary
-tree. The function takes a pointer to the root of the tree as a parameter.
+The function takes a pointer to the root of the tree as a parameter.
 If the tree is empty, the function return 0. Otherwise, it adds 1 to the
 result of counting the nodes in the left and right subtrees, recursively.
 This process continues until all nodes in the tree have been counted.
@@ -42,6 +41,19 @@ struct TreeNode{
     data(d), left(l), right(r) {}
 };
 
+class Solution {
+public:
+    int countNodes(TreeNode* root) {
+        if( root == nullptr) return 0;
+        return 1 + countNodes(root->left) + countNodes(root->right); 
+    }
+
+    void printSolution( TreeNode* root){
+        int totalNodes = countNodes(root);
+        cout<<totalNodes<<"\n";
+    }
+};
+
 class BinaryTree {
 public:
     TreeNode* root;
@@ -49,7 +61,7 @@ public:
     BinaryTree() : root(nullptr) {}
 
     TreeNode* createTree(vector<int>& tree, int id) {
-        if (id >= tree.size() || tree[id] == -1) {
+        if (id >= tree.size() || tree[id] == -1 ) {
             return nullptr;
         }
 
@@ -75,16 +87,7 @@ public:
     }
 
     void print() {
-        cout<<"[ "; DFS_InOrder(root); cout<<"]";
-        cout << endl;
-    }
-};
-
-class Solution {
-public:
-    int countNodes(TreeNode* root) {
-        if( root == nullptr) return 0;
-        return 1 + countNodes(root->left) + countNodes(root->right); 
+        cout<<"[ "; DFS_InOrder(root); cout<<"] \n";
     }
 };
 
@@ -95,15 +98,14 @@ void testCases(){
         {1}
     };
 
-    for( auto tree : testCases ){
-        BinaryTree test;
+    for( auto test : testCases ){
 
-        test.buildTree(tree);
-
-        test.print();
+        BinaryTree tree;
+        tree.buildTree(test);
+        tree.print();
 
         Solution sol;
-        cout << sol.countNodes(test.root)<< "\n";
+        sol.printSolution(tree.root);
     }
 }
 
