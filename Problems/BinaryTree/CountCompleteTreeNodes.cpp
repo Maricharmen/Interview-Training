@@ -1,72 +1,113 @@
 /*
 Site: LeetCode
+Link: https://leetcode.com/problems/count-complete-tree-nodes/description/
 Topic: Binary Tree 
 
 222. Count Complete Tree Nodes
 
-Approach: Recursion
+Given the root of a complete binary tree, return the number of the nodes 
+in the tree.
+
+Approach: Recursion - DFS Pre-Order
+
+A recursive DFS approach is implemented in pre-order.
+The countNodes function calculates the total number of nodes in a binary
+tree. The function takes a pointer to the root of the tree as a parameter.
+If the tree is empty, the function return 0. Otherwise, it adds 1 to the
+result of counting the nodes in the left and right subtrees, recursively.
+This process continues until all nodes in the tree have been counted.
 
 Required Time: 
+
 Complexity Time: 
+O(n)
+
 Complexity Space: 
+If we don’t consider the size of the stack for function calls then O(1) 
+otherwise O(h) where h is the height of the tree. 
 
 Assumpitions: 
 
 */
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-struct Node{
+struct TreeNode{
     int data;
-    Node* left, *right; 
+    TreeNode* left, *right; 
 
-    Node( int d, Node* l = nullptr, Node* r = nullptr) : data(d), left(l), right(r) {}
-
+    TreeNode( int d, TreeNode* l = nullptr, TreeNode* r = nullptr) : 
+    data(d), left(l), right(r) {}
 };
 
-int countNodes( Node* root ){
-    if( root == nullptr ) return 0; 
+class BinaryTree {
+public:
+    TreeNode* root;
 
-    return 1 + countNodes(root->left) + countNodes(root->right);
-}
+    BinaryTree() : root(nullptr) {}
 
-Node* insert( Node* root, int data){
-    if( root == nullptr ){
-        Node* newNode = new Node(data);
-        return newNode; 
-    }else if( data >  root->data ){
-        root->right = insert( root->right, data );
-    }else{
-        root->left = insert( root->left, data );
+    TreeNode* createTree(vector<int>& tree, int id) {
+        if (id >= tree.size() || tree[id] == -1) {
+            return nullptr;
+        }
+
+        TreeNode* root = new TreeNode(tree[id]);
+        root->left = createTree(tree, 2 * id + 1); 
+        root->right = createTree(tree, 2 * id + 2); 
+
+        return root;
     }
 
-    return root; 
-}
-
-void dfs_InOrder( Node* root){
-    if( root == nullptr) {
-        return;
+    void buildTree(vector<int>& tree) {
+        root = createTree(tree, 0);
     }
-    
-    dfs_InOrder( root->left);
-    cout<<root->data<<" ";
-    dfs_InOrder( root->right);
+
+    void DFS_InOrder( TreeNode* root){
+        if( root == nullptr) {
+            return;
+        }
+        
+        DFS_InOrder( root->left);
+        cout<<root->data<<" ";
+        DFS_InOrder( root->right);
+    }
+
+    void print() {
+        cout<<"[ "; DFS_InOrder(root); cout<<"]";
+        cout << endl;
+    }
+};
+
+class Solution {
+public:
+    int countNodes(TreeNode* root) {
+        if( root == nullptr) return 0;
+        return 1 + countNodes(root->left) + countNodes(root->right); 
+    }
+};
+
+void testCases(){
+    vector<vector<int>> testCases {
+        {1,2,3,4,5,6},
+        {1,2,3},
+        {1}
+    };
+
+    for( auto tree : testCases ){
+        BinaryTree test;
+
+        test.buildTree(tree);
+
+        test.print();
+
+        Solution sol;
+        cout << sol.countNodes(test.root)<< "\n";
+    }
 }
 
 int main(){
-
-    Node* child5 = new Node(6); 
-    Node* child4 = new Node(5); 
-    Node* child3 = new Node(4); 
-    Node* child2 = new Node(3, child5); 
-    Node* child1 = new Node(2, child3, child4); 
-    Node* root = new Node(1, child1, child2); 
-
-    dfs_InOrder(root); cout<<"\n";
-    int totalNodes = countNodes( root );
-    cout<<totalNodes<<"\n"; 
-
+    testCases(); 
     return 0;
-
 }
