@@ -93,9 +93,9 @@ public:
 
 void testCases(){
     vector<vector<int>> testCases {
-        {1,2,3,4,5,6},
-        {1,2,3},
-        {1}
+        {1,2,3,4,5,6}, //6
+        {1,2,3}, //3
+        {1} //1
     };
 
     for( auto test : testCases ){
