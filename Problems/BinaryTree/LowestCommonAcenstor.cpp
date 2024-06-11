@@ -1,7 +1,9 @@
 /*
-
 Site: GeekForGeeks
-Topic: Lowest Common Ancestor in a Binary Search Tree.
+Link: https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-search-tree/
+Topic: Binary Tree 
+
+Lowest Common Ancestor in a Binary Search Tree.
 
 Given two values n1 and n2 in a Binary Search Tree, 
 find the Lowest Common Ancestor (LCA). You may 
