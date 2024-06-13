@@ -217,36 +217,13 @@ void testCases() {
         {{}, {0}} //0
     };
 
-    Solution sol;
-
-    cout<<"Merge V1: \n"; 
-
     for ( auto test : testCases) {
         LinkedList list1, list2;
         list1.createList(test.first);
         list2.createList(test.second);
 
+        Solution sol;
         sol.printSolution( sol.mergeTwoLists_V1(list1.head, list2.head));
-    }
-
-    cout<<"Merge V2: \n"; 
-
-    for ( auto test : testCases) {
-        LinkedList list1, list2;
-        list1.createList(test.first);
-        list2.createList(test.second);
-
-        sol.printSolution( sol.mergeTwoLists_V2(list1.head, list2.head));
-    }
-
-    cout<<"Merge Recursion: \n"; 
-
-    for ( auto test : testCases) {
-        LinkedList list1, list2;
-        list1.createList(test.first);
-        list2.createList(test.second);
-
-        sol.printSolution( sol.mergeTwoListsRecursion(list1.head, list2.head));
     }
     
 }
