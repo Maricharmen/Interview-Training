@@ -132,7 +132,7 @@ public:
 
 void testCases(){
     vector<pair<vector<int>, int>> testCases{
-        {{1,2,3,4,5,8}, {2}},
+        {{1,2,3,4,5,8}, {2}}, //4 5 8
     };
 
     for( auto test : testCases){
