@@ -1,6 +1,6 @@
 /*
 Site: GeekForGeeks
-Link:
+Link: https://leetcode.com/problems/valid-parentheses/description/
 Topic: String - Stack
 
 20. Valid Parentheses
@@ -15,16 +15,14 @@ Assumpitions:
 
 #include <iostream>
 #include <vector>
+#include <map>
 #include <stack>
 #include <string>
 using namespace std;
-/*
-( { { } } [ {} ] )
-( {  
-*/
+
 class Solution{
 public:
-    bool isValid(string s) {
+    bool isValid_V1(string s) {
 
         stack<char> verification;
 
@@ -51,8 +49,36 @@ public:
         else return false;
     }
 
+    bool isValid_V2( string s){
+        stack<int> verification;
+
+        map<char,char> parenthesis {
+            {'(', ')'},
+            {'{', '}'},
+            {'[', ']'},
+        };
+
+        for( int i=0; i<s.size(); i++){
+
+            char open = s[i];
+
+            if( open == '(' || open == '{' || open =='['){
+                verification.push(open);
+            }else if( !verification.empty() && parenthesis[verification.top()] == open){
+                verification.pop();
+            }else{
+                return false;
+            }
+
+        }
+
+        if( verification.empty())return true;
+        else return false;
+
+    }
+
     void printSolution( string s){
-        if( isValid(s)) cout<<"True"<<"\n";
+        if( isValid_V2(s)) cout<<"True"<<"\n";
         else cout<<"False"<<"\n";
     }
 
