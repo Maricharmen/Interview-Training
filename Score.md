@@ -1,4 +1,5 @@
 # SCORE
+### Calificaciones para mantener un seguimiento en las areas de mejora.
 
 |       | Level         | Coding      | Testing    | Thinking              | Debugging                              |
 |-------|---------------|-------------|------------|-----------------------|----------------------------------------|
