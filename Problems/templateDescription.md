@@ -1,24 +1,16 @@
-## Site
-[Link] ()
+## Site: abc
 
-## Topic
+**Link:** [Link]()
+**Topic:** abc
 
-Title / Description
+### Name:
 
-## Approach
-
-Data Structure / Algorithm / Solution
-
-### Complexity
-- **Time:** 
-- **Space:** 
-
-### Assumptions
+abc
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|
 | **Score** | #     | #      | #       | #        | #          |
 | **Time (min)** | | ## | ## | ## | ## |
 
-## Notes
-
+### Notes
+- abc

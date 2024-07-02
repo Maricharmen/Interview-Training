@@ -1,15 +1,14 @@
 /*
-Site: GeekForGeeks
-Link: https://leetcode.com/problems/valid-parentheses/description/
-Topic: String - Stack
 
 20. Valid Parentheses
 
-Approach: Stack
-Required Time: +++
-Complexity Time: O(n)
-Complexity Space: O(n)
-Assumpitions: 
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
 
 */
 
@@ -22,6 +21,12 @@ using namespace std;
 
 class Solution{
 public:
+    /**
+     * Aproach: Stack
+     * Complexity Time: O(n)
+     * Complexity Space: O(n)
+     * Assumpitions: 
+     */
     bool isValid_V1(string s) {
 
         stack<char> verification;

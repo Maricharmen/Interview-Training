@@ -1,14 +1,11 @@
 ## Site: UCP Homework
-Link:
-Topic: Graph
+
+**Link:**
+**Topic:** Graph
 
 ### RoadNetworks
 
 In some states, it is not possible to drive between any two towns because they are not connected to the same road network. Given a list of towns and a list of pairs representing roads between towns, return the number of road networks. (For example, a state in which all towns are connected by roads has 1 road network, and a state in which none of the towns are connected by roads has 0 road networks).
-
-#### Approach: Undirected Graph - Recursive DFS
-
-#### Assumptions: 
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|
