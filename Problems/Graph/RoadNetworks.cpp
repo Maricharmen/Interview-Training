@@ -13,28 +13,29 @@ has 1 road network, and state in which none of the towns are connected by
 roads has 0 road networks).
 
 Approach: Undirected Graph - Recursive DFS
+Assumpitions: 
 
-Score: 
+---------------------------------------------------------------
+           | Level | Coding | Testing | Thinking | Debugging  |
+---------------------------------------------------------------
+Score      |  +    | +++    | +++     | ++       | +++        |
+---------------------------------------------------------------
+Time (min) |       | 15     | 10      | 15       | 20         |
+---------------------------------------------------------------
 
-Required Time: 
-
-Thinking 15 minutes
--Pensamiento de la solucion a primera vista
--Dificultades en hallar si era undirected o directed -> Comprension lectora
-
-Coding 25 minutes
--Dominio en el recorrido DFS 
--Codeo rapido
--Lentitud en testCases
-
-Debugging 20 minutes
+Notes
+-Pensamiento de la solucion a primera vista.
+-Dificultades en hallar si era undirected o directed. -> Comprension lectora
+-Dominio en el recorrido DFS.
+-Codeo normal.
+-Lentitud en testCases.
 -Explore town by town lo que causo que towns sin conexiones sean contados. Cambie la
 visita de cada ciudad por la visita de nodos en el grafo.
 -Al contruir el grafo y no limpiarlo causo que para el test 2 se reutilicen
-datos. Agrege la limpieza del grafo
+datos. Agrege la limpieza del grafo.
 -Tuve que imprimir el grafo para ver que estaba pasando
 
-Assumpitions: 
+
 
 */
 
