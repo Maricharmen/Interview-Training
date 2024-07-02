@@ -1,25 +1,24 @@
-# Description
+## Site
+Link:
 
-## Site: 
-## [Link] ()
 ## Topic
 
-Title / Description
+## Title / Description
 
 ## Approach
 
-Data Structure / Algorihmic / Solution
+## Data Structure / Algorithm / Solution
 
-## Complexity Time: 
-## Complexity Space: 
-## Assumpitions: 
+### Complexity
+- **Time:** 
+- **Space:** 
 
----------------------------------------------------------------
-           | Level | Coding | Testing | Thinking | Debugging  |
---------------------------------------------------------------|
-Score      | #     | #      | #       | #        | #          |
---------------------------------------------------------------|
-Time (min) |       | ##     | ##      | ##       | ##         |
---------------------------------------------------------------|
+### Assumptions
+
+|           | Level | Coding | Testing | Thinking | Debugging  |
+|-----------|-------|--------|---------|----------|------------|
+| **Score** | #     | #      | #       | #        | #          |
+| **Time (min)** | | ## | ## | ## | ## |
 
 ## Notes
+
