@@ -3,11 +3,11 @@ Link:
 
 ## Topic
 
-## Title / Description
+Title / Description
 
 ## Approach
 
-## Data Structure / Algorithm / Solution
+Data Structure / Algorithm / Solution
 
 ### Complexity
 - **Time:** 
