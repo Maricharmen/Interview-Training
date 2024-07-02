@@ -1,6 +1,7 @@
 ## Site: GeekForGeeks
 
-**Link:** [Link](https://leetcode.com/problems/valid-parentheses/description/)
+**Link:** [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
+---
 **Topic:** String - Stack
 
 ### Name: 20. Valid Parentheses
@@ -19,4 +20,4 @@ An input string is valid if:
 | **Time (min)** | | ## | ## | ## | ## |
 
 ### Notes
-- No considere todos los edge cases, proble el codigo varias veces.
+- No considere todos los edge cases, probé el codigo varias veces.
