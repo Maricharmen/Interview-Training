@@ -1,7 +1,7 @@
 ## Site: GeekForGeeks
 
 **Link:** [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
----
+--
 **Topic:** String - Stack
 
 ### Name: 20. Valid Parentheses
