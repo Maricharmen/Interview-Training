@@ -8,10 +8,12 @@
 
 In some states, it is not possible to drive between any two towns because they are not connected to the same road network. Given a list of towns and a list of pairs representing roads between towns, return the number of road networks. (For example, a state in which all towns are connected by roads has 1 road network, and a state in which none of the towns are connected by roads has 0 road networks).
 
+### Version 1:
+
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|
-| **Score** |  +    | +++    | +++     | ++       | +++        |
-| **Time (min)** | | 15     | 10      | 15       | 20         |
+| **Score** |  +    | ++     | ++      | ++       | +++        |
+| **Time (min)** | | 15      | 10      | 15       | 20         |
 
 ### Notes
 - Pensamiento de la solución a primera vista.

@@ -14,14 +14,20 @@ roads has 0 road networks).
 #include <vector>
 #include <map>
 #include <string>
-
 using namespace std;
 
-class Solution{
+/**
+ * Version 1: 
+ * Approach: Undirected Graph - Recursive DFS
+ * Assumpitions: 
+ */
+
+class SolutionVersion_1{
 private:
     map<string, vector<string>> graph;
 
 public:
+    
     /**
      * Complexity Time: O(E) 
      * Complexity Space: O( V + E)
@@ -36,18 +42,12 @@ public:
     }
 
     /**
-     * Approach: Undirected Graph - Recursive DFS
      * Complexity Time: O( V + E ) 
      * Complexity Space: O( V )
-     * Assumpitions:
      */
     int countRoadNetworks(vector<string>& towns){
 
         map<string, bool> visited;
-
-        for( auto town : towns){
-            visited[town] = false;
-        }
 
         int totalRoads = 0;
 
@@ -104,7 +104,7 @@ void testCases(){
            {"Kona", "Hilo", "Volcano", "Lahaina", "Hana", "Haiku", "Kahului", "Princeville", "Lihue", "Waimea"} }  
     };
 
-    Solution SOL;
+    SolutionVersion_1 SOL;
 
     for( auto test : testCases ){
         SOL.printSolution(test.first, test.second);
