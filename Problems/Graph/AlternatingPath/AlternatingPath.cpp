@@ -46,7 +46,7 @@ public:
        
        queue<pair<string,string>> Q;
        map<string, map<string, bool>> visited;
-       map<string, int> distances;
+       int shortestPath = -1;
 
        Q.push({origin, "blue"});
        Q.push({origin, "red"});
@@ -61,9 +61,7 @@ public:
                 string currentColor = Q.front().second;
                 Q.pop();
 
-                if( distances[currentNode] == 0){
-                    distances[currentNode] = level;
-                }
+                if( currentNode == destination && shortestPath == -1) shortestPath = level;
 
                 visited[currentNode][currentColor] = true;
 
@@ -79,8 +77,7 @@ public:
             level++;
        }
 
-       if( distances[destination] == 0) return -1;
-       return distances[destination];
+       return shortestPath;
         
     }
 
@@ -98,6 +95,69 @@ public:
  */
 
 class SolutionVersion_2{
+private:
+    map<string, vector<pair<string, string>> > graph;
+public:
+
+    /**
+     * Complexity Time: 
+     * Complexity Space: 
+     */
+    void adjancencySet( vector<pair<pair<string,string>, string>>& connections){
+        for( auto node : connections){
+            string origin = node.first.first;
+            string destination = node.first.second;
+            string color = node.second;
+            graph[origin].push_back({destination, color});
+        }
+    }
+
+    /**
+     * Complexity Time: 
+     * Complexity Space: 
+     */
+    int shortestAlternatingPath( string origin, string destination){
+
+        queue<pair<string, pair<string, int>>> Q; 
+        map<string, map<string,bool>> visited; 
+
+        int shortestPath = -1;
+      
+        Q.push({origin, {"",0}});
+
+        visited[origin]["blue"] = true;
+        visited[origin]["red"] = true;
+
+        while( !Q.empty()){
+
+            string currentNode = Q.front().first;
+            string currentColor = Q.front().second.first;
+            int currentDistance = Q.front().second.second;
+            Q.pop();
+            
+            if( currentNode == destination && shortestPath == -1) shortestPath = currentDistance;
+
+            for( auto next : graph[currentNode]){
+                
+                string nextNode = next.first;
+                string nextColor = next.second;
+
+                if( nextColor != currentColor && !visited[nextNode][nextColor]){
+                    Q.push({nextNode, {nextColor, currentDistance + 1}});
+                    visited[nextNode][nextColor] = true;
+                }
+
+            }
+        }
+
+        return shortestPath;
+
+    }
+
+    void printSolution( vector<pair<pair<string,string>, string>> & connections, string origin, string destination ){
+        adjancencySet(connections);
+        cout<<shortestAlternatingPath(origin, destination)<<"\n";
+    }
 
 };
 
@@ -111,10 +171,11 @@ void testCases(){
           { {"D" ,  "C"} , "blue" },
           { {"A" ,  "D"} , "red"  },
           { {"D" ,  "E"} , "red"  },
-          { {"E" ,  "C"} , "red"  } 
+          { {"E" ,  "C"} , "red"  },
+          { {"B" ,  "A"} , "red" }, 
     };
 
-    vector<pair<pair<string, string>, string>>connections_2 {
+    vector<pair<pair<string, string>, string>> connections_2 {
           { {"A" ,  "B"} , "blue" }, 
           { {"A" ,  "C"} , "red"  },
           { {"B" ,  "E"} , "red" },
@@ -129,13 +190,14 @@ void testCases(){
     vector<pair<string, string>> testCases {
         {"A", "E"}, // C1: 4   C2: 2
         {"E", "D"}, // C1: -1  C2: -1
-        {"A", "F"}  // C1: -1  C2: 3
+        {"A", "F"},  // C1: -1  C2: 3
+        {"A", "A"} // C1: 0    C2: 0
     };
 
-    SolutionVersion_1 sol;
+    SolutionVersion_2 sol;
 
     for( auto test : testCases){
-        sol.printSolution(connections_1, test.first, test.second);
+        sol.printSolution(connections_2, test.first, test.second);
     }
 }
 
