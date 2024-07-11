@@ -102,21 +102,6 @@ public:
 
 void testCases(){
 
-    vector<string> personajes {
-      "Rhaenyra", "Alicent", "Daemon","Corlys", "Otto", "Viserys", "Mysaria" 
-    };
-
-    vector<pair<string, string>> rivalidades {
-        {"Rhaenyra", "Alicent"},
-        {"Daemon", "Otto"},
-        {"Rhaenyra", "Otto"},
-        {"Alicent", "Daemon"},
-        {"Corlys", "Otto"},
-        {"Corlys", "Alicent"},
-        {"Mysaria", "Otto"}
-       
-    };
-
     vector< pair< vector<string>, vector<pair<string,string>> > > testCases{
         { {"Rhaenyra", "Alicent", "Daemon","Corlys", "Otto", "Viserys", "Mysaria" }, 
           { {"Rhaenyra", "Alicent"},

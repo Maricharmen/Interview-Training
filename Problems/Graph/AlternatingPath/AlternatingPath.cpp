@@ -20,7 +20,7 @@ using namespace std;
 * Assumpitions:
 */
 
-class SolutionVersion_1{
+class Solution_V1{
 private:
     map<string, map<string, vector<string> > > graph;
 public:
@@ -94,7 +94,7 @@ public:
  * Assumpitions:
  */
 
-class SolutionVersion_2{
+class Solution_V2{
 private:
     map<string, vector<pair<string, string>> > graph;
 public:
@@ -194,7 +194,7 @@ void testCases(){
         {"A", "A"} // C1: 0    C2: 0
     };
 
-    SolutionVersion_2 sol;
+    Solution_V2 sol;
 
     for( auto test : testCases){
         sol.printSolution(connections_2, test.first, test.second);
