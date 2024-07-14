@@ -10,7 +10,7 @@ Count all nodes until k distance from root
 Given a root of a tree, and an integer k. Count all the nodes until
 k distance from root.
 
-### Version 1
+### Version 1 - Mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|
@@ -20,3 +20,13 @@ k distance from root.
 ### Notes
 - Codeo lento en la contruccion del arbol
 - Tuvo que comentar e imprimir para ver que estaba pasando
+
+### Version 1: Timer: 14:42 - No Mock
+
+|           | Level | Coding | Testing | Thinking | Debugging  |
+|-----------|-------|--------|---------|----------|------------|
+| **Score** | +     | +      | +       | +        | +          |
+| **Time (min)** | |  |  |  |  |
+
+### Notes
+- Falla de escritura en los parametros y condicionales de caso base.

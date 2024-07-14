@@ -1,4 +1,4 @@
-## Site: 
+## Site: Sergio Mock
 
 **Link:** [Link] (https://leetcode.com/problems/shortest-path-with-alternating-colors/description/)
 
@@ -21,7 +21,7 @@ Return an array answer of lenght n, where each answer[x] is the length
 of the shortest path grom node 0 to node x such that the edge colors 
 alternate aling the path, or -1 if such a path does not exist.
 
-### Version 1
+### Version 1 -No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|

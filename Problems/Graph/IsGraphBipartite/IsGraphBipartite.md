@@ -22,7 +22,7 @@ such that every edge in the graph connects a node in set A and a node in set B.
 
 Return true if and only of it is bipartite.
 
-### Version 1 
+### Version 1 - No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|

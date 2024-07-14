@@ -14,7 +14,7 @@ You are given an array prerequisites where prerequisites[i] = [a_i, b_i] indicat
  Return the ordering of courses you should take to finish all courses. If there are many
  valid answers, return any of them. If it is impossible to finish all courses, return an empty array.
 
-### Version 1
+### Version 1 - No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|
@@ -25,7 +25,7 @@ You are given an array prerequisites where prerequisites[i] = [a_i, b_i] indicat
 - Construccion del grafo erronea.
 
 
-### Version 2
+### Version 2 - No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|

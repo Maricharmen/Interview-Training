@@ -15,7 +15,7 @@ and choosing a different day in the future to sell that stack.
 Return the maximum profit you can achieve from this transaction. If you cannot
 achieve any profit, return 0.
 
-### Version 1 
+### Version 1 - No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|
@@ -25,7 +25,7 @@ achieve any profit, return 0.
 ### Notes
 - Estaba obteniendo la diferencia de los iteradores y no de los valores.
 
-### Version 2
+### Version 2 - No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|

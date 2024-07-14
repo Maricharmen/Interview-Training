@@ -14,7 +14,7 @@ You are given an array prerequisites where prerequisites[i] = [a_i, b_i] indicat
  Return true if you can finish all courses. Otherwise, return false.
 
 
-### Version 1
+### Version 1 - No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|

@@ -22,7 +22,7 @@
 #include <map>
 using namespace std;
 
-class Solution{
+class Solution_V1 {
 private:
     map<int, vector<int>> graph;
 public: 
@@ -90,7 +90,7 @@ void testCases(){
         { {1,3}, {0,2}, {1,3}, {0,2}}, //Expected: 1
     };
 
-    Solution sol;
+    Solution_V1 sol;
 
     for( auto test : testCases ){
         sol.printSolution(test);

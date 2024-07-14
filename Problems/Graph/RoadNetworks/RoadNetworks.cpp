@@ -22,7 +22,7 @@ using namespace std;
  * Assumpitions: 
  */
 
-class SolutionVersion_1{
+class Solution_V1{
 private:
     map<string, vector<string>> graph;
 
@@ -104,7 +104,7 @@ void testCases(){
            {"Kona", "Hilo", "Volcano", "Lahaina", "Hana", "Haiku", "Kahului", "Princeville", "Lihue", "Waimea"} }  
     };
 
-    SolutionVersion_1 SOL;
+    Solution_V1 SOL;
 
     for( auto test : testCases ){
         SOL.printSolution(test.first, test.second);

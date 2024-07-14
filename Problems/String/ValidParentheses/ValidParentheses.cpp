@@ -19,7 +19,7 @@ Every close bracket has a corresponding open bracket of the same type.
 #include <string>
 using namespace std;
 
-class Solution{
+class Solution_V1{
 public:
     /**
      * Aproach: Stack
@@ -54,6 +54,15 @@ public:
         else return false;
     }
 
+    void printSolution( string s){
+        if( isValid_V1(s)) cout<<"True"<<"\n";
+        else cout<<"False"<<"\n";
+    }
+
+};
+
+class Solution_V2{
+
     bool isValid_V2( string s){
         stack<int> verification;
 
@@ -86,7 +95,6 @@ public:
         if( isValid_V2(s)) cout<<"True"<<"\n";
         else cout<<"False"<<"\n";
     }
-
 };
 
 void testCases(){
@@ -102,8 +110,9 @@ void testCases(){
         {")(){}"} //False
     };
 
+    Solution_V1 sol;
+
     for( auto test : testCases){
-        Solution sol;
         sol.printSolution(test);
     }
 

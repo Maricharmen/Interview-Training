@@ -11,7 +11,7 @@ cada arista (o edge) entre dos nodos representa la rivalidad entre esas dos pers
 determinar si es posible separar a las personas en dos bandos de manera que no haya rivalidades 
 dentro de un mismo bando.
 
-### Version #
+### Version # - Mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|

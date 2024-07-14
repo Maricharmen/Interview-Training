@@ -13,7 +13,7 @@
 #include <queue>
 using namespace std;
 
-class Solution{
+class Solution_V1 {
 private:
     map<string, vector<string>> graph;
 public:
@@ -123,7 +123,7 @@ void testCases(){
             {"Rhaenyra", "Daemon"} } } //Expect 0
     };
 
-    Solution sol;
+    Solution_V1 sol;
 
     for( auto test : testCases ){
         sol.printSolution( test.first, test.second);
