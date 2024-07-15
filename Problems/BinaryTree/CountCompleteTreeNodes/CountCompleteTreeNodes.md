@@ -9,7 +9,7 @@
 Given the root of a complete binary tree, return the number of the nodes 
 in the tree.
 
-### Version 1 Timer: 17:46 minutes
+### Version 1 Timer: 17:46 minutes - No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|

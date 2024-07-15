@@ -10,7 +10,7 @@ Given a binary tree, the task is to find the height of the tree.
 The height of the tree is the number of vertices in the tree from 
 the root to the deepest node. 
 
-### Version 1 Timer: 12:32
+### Version 1 Timer: 12:32 - No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|

@@ -10,7 +10,7 @@ Given the head of a Binary Search Tree (BST) and a
 range (l, h), count the number of nodes that lie in 
 the given range (l, h).
 
-### Version 1 Timer: 13:36
+### Version 1 Timer: 13:36 - No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|

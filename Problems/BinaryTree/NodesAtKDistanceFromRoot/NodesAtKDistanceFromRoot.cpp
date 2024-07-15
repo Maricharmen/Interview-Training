@@ -17,10 +17,20 @@ struct TreeNode {
     data(d), left(l), right(r) {}
 };
 
+/**
+ * Version 1
+ * Approach: BFS
+ *  
+ * */ 
 class Solution_V1 {
 public:
 
     TreeNode* head;
+
+    /**
+     * Complexity Time: O(n)
+     * Complexity Space: O(n)
+     */
 
     vector<int> nodesAtKDistance( TreeNode* head, int k){
         queue<TreeNode*> Q;
@@ -40,8 +50,6 @@ public:
 
                 if( current->left != nullptr ) Q.push( current->left);
                 if(current->right != nullptr) Q.push(current->right);
-
-
 
             }
 
