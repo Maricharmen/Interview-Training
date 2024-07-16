@@ -35,30 +35,31 @@
 #include <vector>
 #include <map>
 #include <queue>
+#include <set>
 using namespace std;
 
 /**
- * TLE!!
  * Version 
  * Approach: BFS -> Nested Loop
  * Assumpitions: 
  */
 class Solution_V1 {
 private:
-    map<int, vector<int>>graph;
+    map<int, set<int>>graph;
 public:
     void adjacencyList( int numCities, vector<pair<int, int>>& roads){
         for( auto city : roads){
-            graph[city.first].push_back(city.second);
-            graph[city.second].push_back(city.first);
+            graph[city.first].insert(city.second);
+            graph[city.second].insert(city.first);
         }
     }
     /**
-     * Complexity Time: ( E + V^2*E )
-     * Complexity Space: O( V + E )
+     * Complexity Time: ( E + V^2 )
+     * Complexity Space: O( V )
      */
     int maximalNetWorkRank( int numCities ){
 
+        vector<int> visited(numCities, false);
         queue<int> Q;
         Q.push(0);
 
@@ -69,37 +70,32 @@ public:
             int currentNode = Q.front();
             int currentNetWorkRank = graph[currentNode].size();
             Q.pop();
+            
+            visited[currentNode] = true;
 
-            for( int i= currentNode + 1 ; i < numCities; i++ ){
+            for( int i= 0 ; i < numCities; i++ ){
                     
-                    int totalNetWorkRank;
+                    if( !visited[i] ){
 
-                    int nextNetWorkRank = graph[i].size();
+                        int totalNetWorkRank;
 
-                    if( isNeighbor(currentNode, i) ) totalNetWorkRank = currentNetWorkRank+nextNetWorkRank-1;
-                    else totalNetWorkRank = currentNetWorkRank+nextNetWorkRank;
+                        int nextNetWorkRank = graph[i].size();
 
-                    maximalNetwork = max( totalNetWorkRank , maximalNetwork);
+                        if( graph[currentNode].count(i) ) totalNetWorkRank = currentNetWorkRank + nextNetWorkRank - 1;
+                        else totalNetWorkRank = currentNetWorkRank + nextNetWorkRank;
+
+                        maximalNetwork = max( totalNetWorkRank , maximalNetwork);
                    
-                    Q.push(i);
+                        Q.push(i);
+
+                    }
+                    
             }
 
         }
 
         return maximalNetwork;
 
-    }
-
-    /**
-     * Complexity Time: O(E)
-     * Complexity Space: O(1)
-     */
-    bool isNeighbor( int currentNode , int nextNode ){
-        for( auto node : graph[currentNode]){
-            if( node == nextNode) return true;
-        }
-
-        return false;
     }
 
     void printSolution(int numCities, vector<pair<int, int>>& roads ){
