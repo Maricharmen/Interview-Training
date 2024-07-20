@@ -43,7 +43,7 @@ Return the minimum number of jumps to reach num[n-1]. The test cases are generat
 - Mala logica en la asignacion del camino mas corto en los iteradores.
 - Falto inicializar el caso base para continuar DP.
 
-### Version 2 Timer: 5:29 minutos -No mock
+### Version 3 Timer: 5:29 minutos -No mock
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|

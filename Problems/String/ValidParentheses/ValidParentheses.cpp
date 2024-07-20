@@ -1,113 +1,70 @@
-/*
-
-20. Valid Parentheses
-
-Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-
-An input string is valid if:
-
-Open brackets must be closed by the same type of brackets.
-Open brackets must be closed in the correct order.
-Every close bracket has a corresponding open bracket of the same type.
-
-*/
+/**
+ * 20. Valid Parentheses
+ * 
+ * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', 
+ * determine if the input string is valid.
+ * 
+ * An input string is valid if:
+ * 
+ * Open brackets must be closed by the same type of brackets.
+ * Open brackets must be closed in the correct order.
+ * Every close bracket has a corresponding open bracket of the same type.
+ * 
+ */
 
 #include <iostream>
 #include <vector>
 #include <map>
 #include <stack>
-#include <string>
 using namespace std;
 
 class Solution_V1{
 public:
-    /**
-     * Aproach: Stack
-     * Complexity Time: O(n)
-     * Complexity Space: O(n)
-     * Assumpitions: 
-     */
-    bool isValid_V1(string s) {
 
-        stack<char> verification;
+    bool isValid( string s){
 
-        for( int i=0; i<s.size(); i++){
-            
-            char open = s[i];
+        stack<char> S;
 
-            if(  open == '(' || open == '{' || open =='['){
-                verification.push(open);
-            }else{
-                if( !verification.empty() && 
-                  ( (open == ')' && verification.top() == '(' )
-                ||  (open == '}' && verification.top() == '{' )
-                ||  (open == ']' && verification.top() == '[' ) ) ){
-                    verification.pop();
-                } else {
-                    return false;
-                }
-            }
-
-        }
-
-        if( verification.empty())return true;
-        else return false;
-    }
-
-    void printSolution( string s){
-        if( isValid_V1(s)) cout<<"True"<<"\n";
-        else cout<<"False"<<"\n";
-    }
-
-};
-
-class Solution_V2{
-
-    bool isValid_V2( string s){
-        stack<int> verification;
-
-        map<char,char> parenthesis {
-            {'(', ')'},
-            {'{', '}'},
-            {'[', ']'},
+        map<char, char> parentheses {
+            {')', '('},
+            {'}', '{'},
+            {']', '['},
         };
 
-        for( int i=0; i<s.size(); i++){
+        for( int i=0; i < s.size(); i++){
 
-            char open = s[i];
-
-            if( open == '(' || open == '{' || open =='['){
-                verification.push(open);
-            }else if( !verification.empty() && parenthesis[verification.top()] == open){
-                verification.pop();
-            }else{
-                return false;
-            }
-
+            if( s[i] == '(' || s[i] == '{' || s[i] == '[' ){
+                S.push(s[i]);
+            }else if( !S.empty() ){
+                if( S.top() != parentheses[s[i]]) return false;
+                else S.pop();
+            }else return false;
         }
 
-        if( verification.empty())return true;
-        else return false;
+        if( !S.empty() ) return false;
+        
+        return true;
 
     }
 
     void printSolution( string s){
-        if( isValid_V2(s)) cout<<"True"<<"\n";
-        else cout<<"False"<<"\n";
+        cout<<isValid( s)<<" \n";
     }
 };
 
 void testCases(){
-
-    vector<string> testCases = {
-        {"{"}, //False
-        {"()"}, //True
-        {"()[]{}"}, //True
-        {"(]"}, //False
-        {"({}])"}, //False
-        {"){"}, //False
-        {"(("}, //False
-        {")(){}"} //False
+    vector<string> testCases {
+        {"([][{}])"}, //Expected: 1
+        {"{"}, // Expected 0
+        {"{]}"}, //Expected 0
+        {"{"}, // Expected 0
+        {"()"}, // Expected 1
+        {"()[]{}"}, // Expected 1
+        {"(]"}, //Expected 0
+        {"({}])"}, // Expected 0
+        {"){"}, // Expected 0
+        {"(("}, // Expected 0
+        {")(){}"} //Expected 0
     };
 
     Solution_V1 sol;
@@ -115,10 +72,8 @@ void testCases(){
     for( auto test : testCases){
         sol.printSolution(test);
     }
-
 }
 
 int main(){
     testCases();
-    return 0;
 }
