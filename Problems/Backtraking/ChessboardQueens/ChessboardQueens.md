@@ -17,12 +17,14 @@ The input has eight lines, and each of them has eight characters. Each square is
 Output
 Print one integer: the number of ways you can place the queens.
 
-### Version #
+### Version 1
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|
-| **Score** | #     | #      | #       | #        | #          |
+| **Score** | ++++  | ++     | ++      | +++      | +++        |
 | **Time (min)** | | ## | ## | ## | ## |
 
 ### Notes
-- abc
+- El problema ya lo habia realizado antes. Fallas en la logica de verificacion de cada casilla,
+  solucionado por que no necesariamente todos lo despues son validos si depende de la columna,
+  fila y diagonales. 
