@@ -4,24 +4,7 @@
  * You are given an array of numbers representing a stream received one
  * by one. Return an array representing the median after each new number 
  * is received.
- * 
- */
-
-#include <iostream>
-#include <vector>
-#include <queue>
-using namespace std;
-
-/**
- * Version 1
- * Approach: Heap
- * Required Time: 32:47 minutes
- * Assumpitions:
- * - To find the mediam, the numbers must be in order
- */
-class Solution_V1 {
-public:
-
+ * fhdgdfgdfdfg
     /**
      * Find the median from a priority queue
      * 
@@ -41,19 +24,19 @@ public:
     vector<double> runningMedian(vector<int>& elements){
 
         priority_queue<int> inOrder; // Max-Heap
-        vector<double> medianElements; 
+        vector<double> medianElemdfgdsfgdsfgents; 
 
         for( int i=0; i < elements.size(); i++){
 
             inOrder.push(elements[i]); // Add element to heap
 
-            // Add median
+            // Add mediandfgdfg
             if( i%2 == 0){ 
                 medianint>& elements){
         for( auto num : runningMedian(elements)){
-            cout<<num<<" ";
+            cout<<num<<" ";dfgdfgdf
         }
-        cout<<"\n";
+        cout<<"\n";sd
     }
 };
 
