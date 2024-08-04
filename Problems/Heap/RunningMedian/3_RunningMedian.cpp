@@ -28,23 +28,7 @@ public:
      * Complexity Time: O(n) ->Linear
      * Complexity Space: O(1) ->Constant
      * 
-     * @param inOrder Priority queue containing the elements in order.
-     * @param median Index of the median element
-     * @return Median value
-     */
-
-    double findMedian( priority_queue<int> inOrder, int median){
-        
-        // Iterate to find the median
-        for( int i=0; i<inOrder.size() ; i++){
-            if( i == median) return inOrder.top(); 
-            inOrder.pop(); 
-        }
-
-        return inOrder.top();
-    }
-
-    /**
+     * @param inOrd
      * Calculates the running median of a list of elements
      * 
      * Complexity Time: O( (n^2) log n) -> Quasi-Quadratic
@@ -65,23 +49,7 @@ public:
 
             // Add median
             if( i%2 == 0){ 
-                medianElements.push_back(findMedian(inOrder, i/2));
-            }else{
-                medianElements.push_back( (findMedian(inOrder, i/2 + 1 ) + findMedian(inOrder, i/2))/ 2);
-            }
-        }
-
-        return medianElements;
-
-    }
-
-    /**
-     * Prints the running median of the list.
-     * 
-     * @param elements List of numbers.
-     */
-
-    void printSolution( vector<int>& elements){
+                medianint>& elements){
         for( auto num : runningMedian(elements)){
             cout<<num<<" ";
         }
@@ -106,21 +74,6 @@ public:
     /**
      * Adds a number to heaps
      * 
-     * Complexity Time: O(log n) ->Logarithmic
-     * Complexity space: O(1) ->Constant
-     * 
-     * @param num Current number of the list
-     */
-
-    void addNum(int num){
-
-        if( low.empty() || num <= low.top() ){
-            low.push(num);
-        }else{
-            high.push(num);
-        }
-
-        //Balance the heaps
 
         if( low.size() > high.size() + 1){
             high.push(low.top());
