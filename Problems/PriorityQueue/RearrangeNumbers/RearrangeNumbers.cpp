@@ -48,6 +48,10 @@
 #include <map>
 using namespace std;
 
+/**
+ * Version 1
+ * Approach: Max Heap
+ */
 class Solution_V1 {
 public: 
 

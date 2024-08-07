@@ -41,6 +41,11 @@ struct TreeNode{
     data(d), left(l), right(r) {}
 };
 
+/**
+ * Version 1
+ * Approach: BFS
+ */
+
 class Solution_V1 {    
 public:
 

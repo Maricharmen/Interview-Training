@@ -22,6 +22,10 @@
 #include <map>
 using namespace std;
 
+/**
+ * Version 1
+ * Approach: DFS
+ */
 class Solution_V1 {
 private:
     map<int, vector<int>> graph;

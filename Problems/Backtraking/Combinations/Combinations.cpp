@@ -40,6 +40,10 @@
 #include <vector>
 using namespace std;
 
+/**
+ * Version 1
+ * Approach: Backtracking
+ */
 class Solution_V1 {
 public:
 

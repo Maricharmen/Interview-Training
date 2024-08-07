@@ -27,6 +27,10 @@
 #include <stack>
 using namespace std;
 
+/**
+ * Version
+ * Approach: Stack
+ */
 class Solution_V1 {
 public:
 

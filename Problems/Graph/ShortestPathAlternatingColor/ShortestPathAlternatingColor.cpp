@@ -24,6 +24,10 @@
 #include <queue>
 using namespace std;
 
+/**
+ * Version
+ * Approach: BFS
+ */
 class Solution{
 private:
     map<string, map<int, vector<int>>> graph;

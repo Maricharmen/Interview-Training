@@ -38,6 +38,10 @@
 #include <vector>
 using namespace std;
 
+/**
+ * Version 1
+ * Approach: BackTracking
+ */
 class Solution_V1 {
 public: 
 

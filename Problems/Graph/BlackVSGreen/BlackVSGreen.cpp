@@ -13,6 +13,10 @@
 #include <queue>
 using namespace std;
 
+/**
+ * Version 1:
+ * Approach: BFS
+ */
 class Solution_V1 {
 private:
     map<string, vector<string>> graph;

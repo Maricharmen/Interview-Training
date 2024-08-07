@@ -17,8 +17,17 @@
 #include <map>
 using namespace std;
 
+/**
+ * Version 1
+ * Approach: Hash table
+ */
 class Solution_V1{
 public:
+
+    /**
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     */
 
     string customSortString(string order, string s) {
         map<char, int> totalABC;

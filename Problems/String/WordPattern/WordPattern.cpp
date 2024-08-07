@@ -45,6 +45,10 @@ output: false
 #include <set>
 using namespace std;
 
+/**
+ * Version
+ * Approach: Hash Table
+ */
 class Solution_V1{
 public:
 

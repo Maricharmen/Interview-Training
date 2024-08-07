@@ -18,6 +18,10 @@
 #include <stack>
 using namespace std;
 
+/**
+ * Version 1
+ * Approach: Stack
+ */
 class Solution_V1{
 public:
 
