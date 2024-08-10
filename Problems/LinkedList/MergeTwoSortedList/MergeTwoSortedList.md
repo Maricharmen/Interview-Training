@@ -24,3 +24,16 @@ Return the head of the merged linked list.
  cuando alguna de las dos listas llegaba a null solo que unir la que faltaba pero
  intentaste recorrer todo, lo que hizo que pierdas tiempo.
  - Fallos en la implementacion de insert y buildLinkedList pero resulto al instante.
+
+ ### Version 2 20:37 minutes
+
+|           | Level | Coding | Testing | Thinking | Debugging  |
+|-----------|-------|--------|---------|----------|------------|
+| **Score** | +     | ++     | +       | +        | +         |
+| **Time (min)** | | ## | ## | ## | ## |
+
+### Notes
+- Fallos en la implementacion de linkedlist.
+    - El caso cuando head = nullptr
+    - Uso de la funcion insert
+    - Nombre repetidos en las estructuras de datos

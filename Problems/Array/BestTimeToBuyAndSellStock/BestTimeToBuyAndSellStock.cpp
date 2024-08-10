@@ -78,13 +78,40 @@ public:
     }
 };
 
+/**
+ * Verision 3
+ * Practice Again
+ */
+
+class Solution_V3{
+public:
+
+    int maxProfit( vector<int>& prices){
+        
+        int maxProfit = 0;
+        int sell = prices[0];
+
+        for( int i=1; i<prices.size(); i++){
+            sell = min(prices[i], sell);
+            maxProfit = max( prices[i] - sell, maxProfit);
+        }
+        
+        return maxProfit;
+    }
+
+    void printSolution( vector<int>& prices){
+        cout<<maxProfit(prices)<<"\n";
+    }
+
+};
+
 void testCases(){
     vector<vector<int>> testCases {
         { 7,1,5,3,6,4}, //Expected 5
         { 7,6,4,3,1}  //Expected 0
     };
 
-    Solution_V1 sol;
+    Solution_V3 sol;
 
     for( auto test : testCases){
         sol.printSolution(test);

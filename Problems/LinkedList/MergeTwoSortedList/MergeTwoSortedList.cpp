@@ -3,7 +3,8 @@
  * 
  * You are given the heads of two sorted linked lists list1 and list2.
  * 
- * Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+ * Merge the two lists into one sorted list. The list should be made by splicing 
+ * together the nodes of the first two lists.
  * 
  * Return the head of the merged linked list.
  */
@@ -15,7 +16,8 @@
  * Assuptions: Sorted is acendent 
  * 
  * BREAKDOWNS:
- * - The first element(head) is the smallest element, at the begining set my head before to do the merge 
+ * - The first element(head) is the smallest element, at the begining set my head 
+ * before to do the merge 
  * 
  */
 
@@ -130,13 +132,78 @@ public:
 
 };
 
+class Solution_V2{
+public:
+
+    Node* mergeList( Node* list1, Node* list2){
+        if( list1 == nullptr) return list2;
+        if( list2 == nullptr) return list1;
+
+        if( list1->data < list2->data){
+            list1->next = mergeList(list1->next, list2);
+            return list1;
+        }else{
+            list2->next = mergeList(list1, list2->next);
+            return list2;
+        }
+
+    }
+
+    Node* insert( Node* head, int data){
+
+        if( head == nullptr) return new Node(data);
+
+        Node* newNode = new Node(data);
+        Node* current = head;
+
+        while( current->next !=  nullptr){
+            current = current->next;
+        }
+
+        current->next = newNode;
+
+        return head;
+    }
+
+    Node* buildLinkedList( vector<int>& list){
+        Node* linkedList = nullptr;
+
+        for( int i=0; i < list.size(); i++){
+            linkedList = insert(linkedList, list[i]);
+        }
+
+        return linkedList;
+    }
+
+    void printSolution(vector<int>& List1, vector<int>& List2){
+
+        Node* list1 = buildLinkedList(List1); printList(list1);
+        Node* list2 = buildLinkedList(List2); printList(list2);
+
+        Node* list = mergeList(list1, list2);
+        printList(list);
+
+    }
+
+    void printList( Node* list ){
+        Node* current = list;
+
+        while( current != nullptr){
+            cout<<current->data<<" ";
+            current = current->next;
+        }
+
+        cout<<"\n";
+    }
+};
+
 void testCases(){
     vector< pair<vector<int> , vector<int>>> testCases {
         { {1,2,3,4,5}, {3,6,9,10}}, // Expected 1->2->3->3->4->5->6->9->10
         { {1,6,8}, {2,3,4,5,9}} //Expected 1->2->3->4->5->6->8->9
     };
 
-    Solution_V1 sol;
+    Solution_V2 sol;
 
     for( auto test : testCases){
         sol.printSolution(test.first, test.second);

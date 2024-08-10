@@ -35,3 +35,13 @@ achieve any profit, return 0.
 ### Notes
 - Inicializacion de la variable minBuy, estaba intentando usar -INFINITY pero
   no era necesario, bastaba con pensar un el primer caso, del primer dia. 
+
+### Version 3 12:01 minutes
+
+|           | Level | Coding | Testing | Thinking | Debugging  |
+|-----------|-------|--------|---------|----------|------------|
+| **Score** | +     | +      | +       | +        | +          |
+| **Time (min)** | | ## | ## | ## | ## |
+
+### Notes
+- abc
