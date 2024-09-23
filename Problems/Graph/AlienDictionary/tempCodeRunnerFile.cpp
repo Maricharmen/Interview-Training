@@ -1,0 +1,1 @@
+      nodes.insert(first[k] - 'a' ); nodes.insert(second[j] - 'a');
