@@ -1,47 +1,38 @@
-## Site: LeetCode - Mock
+# [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 
-**Link:** [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
+**Site:** LeetCode
 
 **Topic:** Array
 
-### 121. Best Time to Buy and Sell Stock
+**Level:** Easy 
 
-You are given an array prices where prices[i] is the price of a given stock
-on the i th day.
-
-You want to maximize your profit by choosing a single day to buy one stock
-and choosing a different day in the future to sell that stack.
-
-Return the maximum profit you can achieve from this transaction. If you cannot
-achieve any profit, return 0.
-
-### Version 1 - No mock
+**Version 1 - No mock**
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|
 | **Score** | +     |  +     | +       | +         | ++         |
 | **Time (min)** | | 5 | 2 | 2 | 5 |
 
-### Notes
+**Notes**
 - Estaba obteniendo la diferencia de los iteradores y no de los valores.
 
-### Version 2 - No mock
+**Version 2 - No mock**
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|
 | **Score** | ++    | ++      | +      | ++      | ++          |
 | **Time (min)** | | 5 | 5 | 10 | 5 |
 
-### Notes
+**Notes**
 - Inicializacion de la variable minBuy, estaba intentando usar -INFINITY pero
   no era necesario, bastaba con pensar un el primer caso, del primer dia. 
 
-### Version 3 12:01 minutes
+**Version 3 12:01 minutes**
 
 |           | Level | Coding | Testing | Thinking | Debugging  |
 |-----------|-------|--------|---------|----------|------------|
 | **Score** | +     | +      | +       | +        | +          |
 | **Time (min)** | | ## | ## | ## | ## |
 
-### Notes
+**Notes**
 - abc
