@@ -5,6 +5,11 @@
  */
 
 /**
+ * INPUT:
+ * OUTPUT:
+ * BREAKDOWN:
+ */
+/**
  * Input: vector of pair represent connection bidirectional
  * Output: vector of pair with new directed edges
  * 

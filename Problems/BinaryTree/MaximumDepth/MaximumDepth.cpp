@@ -12,7 +12,7 @@ using namespace std;
 
 struct TreeNode{
     int data;
-    TreeNode* left, *right;
+    TreeNode*left, *right;
 
     TreeNode( int d, TreeNode* l = nullptr, TreeNode* r = nullptr) :
     data(d), left(l), right(r) {}
