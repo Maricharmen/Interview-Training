@@ -1,7 +1,5 @@
 /*
 
-
-
 La segunda fue de pasar un número decimal a maya
 
 Y la tercera fue de que tienes un patrón que inicia con 0 y luego para seguir generando 

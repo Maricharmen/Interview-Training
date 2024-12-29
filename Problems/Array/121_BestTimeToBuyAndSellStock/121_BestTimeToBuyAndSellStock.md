@@ -2,9 +2,9 @@
 
 **Site:** LeetCode
 
-**Topic:** Array
-
 **Level:** Easy 
+
+**Topic:** Array
 
 **Version 1 - No mock**
 

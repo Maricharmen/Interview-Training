@@ -1,4 +1,6 @@
 /**
+ * Alternating Edges
+ * 
  * You are given a connected undirected graph
  * 
  * Asign a direction to each edge so that there won't be any paths of length equal or greater than two

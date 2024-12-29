@@ -8,7 +8,7 @@
  * 
  * Input
  * The first input line has two integers n and m: the number of cities and 
- * roads. The cities are numbered 1,2,\dots,n.
+ * roads. The cities are numbered 1,2,...,n.
  * 
  * Then, there are m lines describing the roads. Each line has two integers 
  * a and b: there is a road between those cities.
