@@ -2,16 +2,6 @@
 
 **Site:** Coding Assesment
 
-**Level:** 
+**Level:** Medium
 
 **Topic:** Array - String
-
-**Version #**
-
-|           | Level | Coding | Testing | Thinking | Debugging  |
-|-----------|-------|--------|---------|----------|------------|
-| **Score** | #     | #      | #       | #        | #          |
-| **Time (min)** | | ## | ## | ## | ## |
-
-**Notes**
-- abc

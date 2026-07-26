@@ -2,16 +2,6 @@
 
 **Site:** GeekForGeeks
 
-**Level:** 
+**Level:** Easy
 
 **Topic:** Array - Map
-
-**Version 1 - No mock**
-
-|           | Level | Coding | Testing | Thinking | Debugging  |
-|-----------|-------|--------|---------|----------|------------|
-| **Score** | +     | +      | +       | ++       | +          |
-| **Time (min)** | | 5 | 2 | 10 | 0 |
-
-**Notes**
-- Excelente, no tardé mucho por que fue solo resolucion del problema. 
