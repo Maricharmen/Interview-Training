@@ -5,13 +5,3 @@
 **Level:** Medium 
 
 **Topic:** Matrix - Array - BFS - DP
-
-**Version #**
-
-|           | Level | Coding | Testing | Thinking | Debugging  |
-|-----------|-------|--------|---------|----------|------------|
-| **Score** | #     | #      | #       | #        | #          |
-| **Time (min)** | | ## | ## | ## | ## |
-
-**Notes**
-- abc

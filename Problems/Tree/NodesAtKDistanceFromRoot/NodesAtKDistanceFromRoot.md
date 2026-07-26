@@ -5,13 +5,3 @@
 **Level:** 
 
 **Topic:** BinaryTree
-
-**Version 1 Timer: 12:00 - No mock**
-
-|           | Level | Coding | Testing | Thinking | Debugging  |
-|-----------|-------|--------|---------|----------|------------|
-| **Score** | +     | +      | +       | +        | +          |
-| **Time (min)** | | ## | ## | ## | ## |
-
-**Notes**
-- 

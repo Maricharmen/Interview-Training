@@ -1,6 +1,6 @@
 # AlternatingPath
 
-**Site:** UCP Homework
+**Site:** Gemini
 
 **Level:** Medium
 

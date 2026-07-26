@@ -5,13 +5,3 @@
 **Level:** Easy 
 
 **Topic:** String - Stack
-
-**Version 1 - Timer: 24:11 -No mock**
-
-|           | Level | Coding | Testing | Thinking | Debugging  |
-|-----------|-------|--------|---------|----------|------------|
-| **Score** |      |      |        |        |         |
-| **Time (min)** | | ## | ## | ## | ## |
-
-**Notes**
--

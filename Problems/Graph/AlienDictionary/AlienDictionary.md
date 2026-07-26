@@ -2,16 +2,7 @@
 
 **Site:** GeekForGeeks
 
-**Level:** 
+**Level:** Hard
 
 **Topic:** Graph Topological Sort
 
-**Version #**
-
-|           | Level | Coding | Testing | Thinking | Debugging  |
-|-----------|-------|--------|---------|----------|------------|
-| **Score** | #     | #      | #       | #        | #          |
-| **Time (min)** | | ## | ## | ## | ## |
-
-**Notes**
-- abc

@@ -5,13 +5,3 @@
 **Level:** Hard 
 
 **Topic:** LinkedList
-
-**Version 1 1:30:00 aprox**
-
-|           | Level | Coding | Testing | Thinking | Debugging  |
-|-----------|-------|--------|---------|----------|------------|
-| **Score** | ++++  | #      | #       | #        | #          |
-| **Time (min)** | | ## | ## | ## | ## |
-
-**Notes**
-- Busque ayuda. 
