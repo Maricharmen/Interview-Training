@@ -13,3 +13,53 @@
  */
 
  
+#include <iostream>
+#include <vector>
+#include <map>
+using namespace std;
+
+class FindSumPairs {
+public:
+    
+    vector<int> vec1;
+    vector<int> vec2;
+    map<int, int> num1;
+    map<int, int> num2;
+
+    FindSumPairs(vector<int>& nums1, vector<int>& nums2) {
+        vec1 = nums1;
+        vec2 = nums2;
+
+        for( auto i : nums1) num1[i]++;
+        for( auto i : nums2) num2[i]++;
+
+    }
+    
+    void add(int index, int val) {
+        num2[vec2[index]]--;
+        vec2[index] += val;
+        num2[vec2[index]]++;
+    }
+    
+    int count(int tot) {
+        int countpair = 0;
+        for( auto [a,b] : num1){
+        
+            int find = tot - a;
+            if( num2.count(find) ){
+
+                countpair+= b*num2[find];
+            }
+        }
+
+        return countpair;
+    }
+};
+
+/**
+ * Your FindSumPairs object will be instantiated and called as such:
+ * FindSumPairs* obj = new FindSumPairs(nums1, nums2);
+ * obj->add(index,val);
+ * int param_2 = obj->count(tot);
+ */
+ 
