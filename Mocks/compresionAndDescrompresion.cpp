@@ -50,18 +50,18 @@ Input is always valid, so no need to check its validity.
 Learning objectives: This question gives you the chance to practice with strings, recursion, 
 algorithm, compilers, automata, and loops. It’s also an opportunity to work on coding with better efficiency.
 
-$N$ = length of the input compressed string s.
-$L$ = total length of the decompressed output string.
-$D$ = maximum nesting depth of brackets
+N = length of the input compressed string s.
+L = total length of the decompressed output string.
+D = maximum nesting depth of brackets
 
 Time Complexity O(N + L) -> O(L)
 Space Complexity P(D + L) -> O(L)
 
-If we measure strictly against the input length $N$, the time isn't bounded purely by $N$ because nesting can 
-cause exponential expansion relative to the input characters. Therefore, the time complexity is $\mathcal{O}(L)$, 
-where $L$ is the length of the fully decompressed string, since we must construct and copy every character into 
-memory, plus $\mathcal{O}(N)$ to scan the input tokens. The auxiliary space is $\mathcal{O}(D)$ for the recursion 
-stack where $D$ is the maximum bracket depth, and $\mathcal{O}(L)$ to store the resulting decompressed string.
+If we measure strictly against the input length N, the time isn't bounded purely by N because nesting can 
+cause exponential expansion relative to the input characters. Therefore, the time complexity is O(L), 
+where L is the length of the fully decompressed string, since we must construct and copy every character into 
+memory, plus O(N) to scan the input tokens. The auxiliary space is O(D) for the recursion 
+stack where D is the maximum bracket depth, and O(L) to store the resulting decompressed string.
 */
 
 #include <iostream>
