@@ -62,6 +62,12 @@ cause exponential expansion relative to the input characters. Therefore, the tim
 where L is the length of the fully decompressed string, since we must construct and copy every character into 
 memory, plus O(N) to scan the input tokens. The auxiliary space is O(D) for the recursion 
 stack where D is the maximum bracket depth, and O(L) to store the resulting decompressed string.
+
+Similar problem: 
+https://leetcode.com/problems/decode-string/description/?envId=stack&envType=problem-list-v2&
+https://www.geeksforgeeks.org/problems/decode-the-string2444/1?utm_source
+
+
 */
 
 #include <iostream>
